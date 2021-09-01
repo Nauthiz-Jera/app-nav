@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import singleSpaReact from "single-spa-react";
 import Root from "./index";
+import withClosedNavigation from "./hocs/withClosedNavigation";
+import useNavState from "./hooks/useNavState";
 
 const lifecycles = singleSpaReact({
   React,
@@ -14,3 +16,5 @@ const lifecycles = singleSpaReact({
 });
 
 export const { bootstrap, mount, unmount } = lifecycles;
+
+export { withClosedNavigation, useNavState };
